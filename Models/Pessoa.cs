@@ -1,21 +1,28 @@
-namespace DesafioProjetoHospedagem.Models;
-
-public class Pessoa
+namespace DesafioProjetoHospedagem.Models
 {
-    public Pessoa() { }
-
-    public Pessoa(string nome)
+    public class Pessoa
     {
-        Nome = nome;
-    }
+        // Construtor padrão
+        public Pessoa() { }
 
-    public Pessoa(string nome, string sobrenome)
-    {
-        Nome = nome;
-        Sobrenome = sobrenome;
-    }
+        // Construtor com nome
+        public Pessoa(string nome)
+        {
+            Nome = nome;
+        }
 
-    public string Nome { get; set; }
-    public string Sobrenome { get; set; }
-    public string NomeCompleto => $"{Nome} {Sobrenome}".ToUpper();
+        // Construtor com nome e sobrenome
+        public Pessoa(string nome, string sobrenome)
+        {
+            Nome = nome;
+            Sobrenome = sobrenome;
+        }
+
+        // Propriedades
+        public string Nome { get; set; }
+        public string Sobrenome { get; set; }
+
+        // Propriedade somente leitura para o nome completo
+        public string NomeCompleto => $"{Nome} {Sobrenome}".ToUpper();
+    }
 }
